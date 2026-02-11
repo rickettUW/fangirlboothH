@@ -27,3 +27,19 @@ snap.onclick = () => {
     alert("Photo captured (logic ready for export)");
   });
 };
+/* FRAME COLOR PICKER LOGIC */
+const stars = document.querySelectorAll(".star");
+let frameColor = "#ffffff";
+
+stars.forEach(star => {
+  star.addEventListener("click", () => {
+    // Remove active from all
+    stars.forEach(s => s.classList.remove("active"));
+
+    // Activate clicked star
+    star.classList.add("active");
+
+    // Save frame color
+    frameColor = star.dataset.frame;
+  });
+});
