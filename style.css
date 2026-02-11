@@ -54,3 +54,44 @@ video {
   font-size: 64px;
   color: white;
 }
+/* FRAME PICKER STARS */
+.frames {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.star {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: 18px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+
+  background: #fff;
+  color: #111;
+  border: 2px solid #111;
+  opacity: 0.6;
+  transition: all 0.15s ease;
+}
+
+.star.active {
+  opacity: 1;
+  transform: scale(1.15);
+  box-shadow: 0 0 0 2px #111 inset;
+}
+
+.star:active {
+  transform: scale(0.95);
+}
+
+/* POLKA DOT OPTION */
+.star.polka {
+  background:
+    radial-gradient(#111 20%, transparent 21%) 0 0 / 8px 8px,
+    #fff;
+}
