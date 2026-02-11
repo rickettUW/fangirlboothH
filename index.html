@@ -4,11 +4,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Fangirl Booth</title>
+  <title>Fangirl Photo Booth</title>
   <link rel="stylesheet" href="style.css" />
 </head>
-<body class="intro">
-  <img src="assets/intro.png" class="intro-img" alt="Intro"/>
-  <a href="booth.html" class="enter-btn">enter →</a>
+<body>
+
+<div class="intro-screen">
+  <img src="assets/intro.png" alt="Fangirl Booth" />
+  <button id="enterBtn">enter →</button>
+</div>
+
+<script>
+  document.getElementById("enterBtn").onclick = () => {
+    window.location.href = "booth.html";
+  };
+</script>
+
 </body>
 </html>
